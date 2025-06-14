@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
+import { Header } from './components';
+import { HomePage } from './pages';
 
 @Component({
   selector: 'app-root',
   template: `
-    Привет мир!
+    <header hmHeader></header>
+        
+    <section class="content">
+      <hm-home-page/>
+    </section>
   `,
-  imports: [],
+  imports: [Header, HomePage],
+  styleUrl: './app.css',
 })
 export class App {}
