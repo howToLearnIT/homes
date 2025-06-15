@@ -1,0 +1,46 @@
+:host {
+    display: grid;
+    column-gap: 14px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+}
+
+.photo {
+  height: 600px;
+  object-fit: cover;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 30pt;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.features {
+    padding-left: 22px;
+    font-size: 14pt;
+}
+
+.location::before {
+  content: url('/assets/location-pin.svg') / '';
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20pt;
+    margin-bottom: 15px;
+    color: var(--secondary-color)
+}
+
+@media (max-width: 1024px) {
+  .photo {
+    width: 100%;
+    height: 400px;
+  }
+}

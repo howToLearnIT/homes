@@ -24,5 +24,5 @@ import { RouterLink } from '@angular/router';
   imports: [NgOptimizedImage, RouterLink]
 })
 export class HouseItem {
-  item = input.required<House>();
+  readonly item = input.required<House>();
 }

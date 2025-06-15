@@ -14,7 +14,7 @@ import { House } from '../../interfaces';
   styleUrl: './house-list.css'
 })
 export class HouseListPage {
-  houseList: House[] = [];
+  readonly houseList: House[] = [];
 
   private readonly houseService: HouseService = inject(HouseService);
 

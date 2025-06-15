@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { HouseItem } from '../house-item';
 import { House } from '../../interfaces';
 
@@ -14,5 +14,5 @@ import { House } from '../../interfaces';
   styleUrl: './house-list.css'
 })
 export class HouseList {
-  list = input.required<House[]>();
+  readonly list = input.required<House[]>();
 }
