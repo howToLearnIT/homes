@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { House } from '../../interfaces';
 import { NgOptimizedImage } from '@angular/common';
 
@@ -7,28 +7,19 @@ import { NgOptimizedImage } from '@angular/common';
   template: `
     <div class="photo">
         <img
-            [ngSrc]="house.photo"
-            alt="Фотография дома {{ house.name }}"
+            [ngSrc]="item().photo"
+            alt="Фотография дома {{ item().name }}"
             fill
             priority
         />
     </div>
-    <h2 class="title">{{ house.name }}</h2>
-    <p class="location">{{ house.city }}, {{ house.state }}</p>
+    <h2 class="title">{{ item().name }}</h2>
+    <p class="location">{{ item().city }}, {{ item().state }}</p>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrl: './house-item.css',
   imports: [NgOptimizedImage]
 })
 export class HouseItem {
-    house: House = {
-        id: 9999,
-        name: 'Test Home',
-        city: 'Test city',
-        state: 'ST',
-        photo: 'https://angular.dev/assets/images/tutorials/common/example-house.jpg',
-        rooms: 3,
-        wifi: true,
-        laundry: false,
-    };
+  item = input.required<House>();
 }
