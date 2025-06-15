@@ -1,12 +1,14 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Search } from '../../components';
+import { Search, HouseList } from '../../components';
 
 @Component({
   selector: 'hm-home-page',
   template: `
     <hm-search />
+    <ul class="list" hmHouseList></ul>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [Search]
+  imports: [Search, HouseList],
+  styleUrl: './home.css'
 })
 export class HomePage {}
