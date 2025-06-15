@@ -9,6 +9,10 @@
     padding: 10px 20px 0 20px;
 }
 
+.link {
+    text-decoration: none;
+}
+
 .photo {
     height: 180px;
     width: 100%;
@@ -22,6 +26,7 @@
     padding: 10px 20px 20px 20px;
     display: flex;
     align-items: center;
+    color: var(--primary-color);
 }
 
 .location::before {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Header } from './components';
-import { HomePage } from './pages';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +8,10 @@ import { HomePage } from './pages';
     <header hmHeader></header>
         
     <section class="content">
-      <hm-home-page/>
+      <router-outlet/>
     </section>
   `,
-  imports: [Header, HomePage],
+  imports: [Header, RouterOutlet],
   styleUrl: './app.css',
 })
 export class App {}
